@@ -23,7 +23,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 @PropertySource({ "classpath:persistence-multiple-db.properties" })
 @EnableJpaRepositories(
-		basePackages = "br.com.lpr.write.persistence", 
+		basePackages = "br.com.lpr.write.repositories", 
 		entityManagerFactoryRef = "writeEntityManagerFactory", 
 		transactionManagerRef = "writePlatformTransactionManager")
 public class WriteDataSourceConfiguration {

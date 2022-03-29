@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class})
+//@EnableAutoConfiguration(excl'ude={DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class})
 //@ComponentScan(basePackages = {"br.com.lpr.read.repositories","br.com.lpr.write.repositories","br.com.lpr.services","br.com.lpr.config","br.com.lpr.write.config","br.com.lpr.read.config"})
 //@EntityScan(basePackages = {"br.com.lpr.entities"})
 //@EnableJpaRepositories(basePackages = {"br.com.lpr.repositories"})

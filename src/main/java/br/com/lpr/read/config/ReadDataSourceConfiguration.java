@@ -25,7 +25,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 @PropertySource({ "classpath:persistence-multiple-db.properties" })
 @EnableJpaRepositories(
-		basePackages = "br.com.lpr.read.persistence" ,
+		basePackages = "br.com.lpr.read.repositories" ,
 		entityManagerFactoryRef = "readEntityManagerFactory", 
 		transactionManagerRef = "readPlatformTransactionManager")
 public class ReadDataSourceConfiguration {

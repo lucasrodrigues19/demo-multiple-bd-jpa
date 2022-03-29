@@ -1,6 +1,5 @@
 package br.com.lpr.config;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +37,15 @@ public class ConfigTest implements CommandLineRunner{
 			System.out.println("Tem "+listUser.size()+" Usuarios!");
 		else
 			System.out.println("Não tem usuários");
+		
+		try {
+			 User user2 = saveUser_ErrorRead();
+			 System.out.println("Era para dar erro :(");
+		}catch(Exception e) {
+			System.out.println("Deu ruim em, foi salvar no readonly");
+			e.printStackTrace();
+		}
+		
 	}
 
 		
@@ -48,5 +56,13 @@ public class ConfigTest implements CommandLineRunner{
 	         user1.setEmail("john13@test.com");
 	         user1.setAge(20);
 	         return userWriteService.save(user1);
+	    }
+	    
+	    public User saveUser_ErrorRead() {
+	    	 User user1 = new User();
+	         user1.setName("John");
+	         user1.setEmail("john13@test.com");
+	         user1.setAge(20);
+	         return userReadService.save(user1);
 	    }
 }

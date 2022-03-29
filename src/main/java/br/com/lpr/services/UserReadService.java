@@ -22,4 +22,14 @@ public class UserReadService {
 	public List<User> findAll() {
 		 return repoistory.findAll();
 	 }
+
+	@Transactional("readPlatformTransactionManager")
+	public User save(User entity) {
+		return repoistory.save(entity);
+	}
+	
+	@Transactional("readPlatformTransactionManager")
+	public void deleteById(Integer id) {
+		repoistory.deleteById(id);
+	}
 }
