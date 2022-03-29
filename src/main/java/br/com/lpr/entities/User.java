@@ -1,4 +1,4 @@
-package br.com.lpr.entities.user;
+package br.com.lpr.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -22,7 +22,7 @@ public class User {
 
     private int age;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 

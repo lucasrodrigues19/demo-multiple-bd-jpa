@@ -1,4 +1,4 @@
-package br.com.lpr.entities.products;
+package br.com.lpr;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
